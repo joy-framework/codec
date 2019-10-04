@@ -7,7 +7,7 @@ base64 encode/decode library for janet
 Add to your `project.janet` file
 
 ```clojure
-{:dependencies [{:repo "https://github.com/joy-framework/codec" :tag ""}]}
+{:dependencies [{:repo "https://github.com/joy-framework/codec" :tag "b02ad8c07885cfe0e83ec04d249570831cf3e070"}]}
 ```
 
 ## Use
