@@ -24,7 +24,7 @@ static Janet encode(int32_t argc, Janet *argv) {
 
   Base64encode(out, (char *)str, len);
 
-  return janet_stringv((const uint8_t *)out, b64_len);
+  return janet_stringv((const uint8_t *)out, b64_len - 1);
 }
 
 static const JanetReg cfuns[] = {
