@@ -1,7 +1,7 @@
 #include <janet.h>
 #include "base64.h"
 
-static Janet decode(int32_t argc, const Janet *argv) {
+static Janet decode(int32_t argc, Janet *argv) {
   janet_fixarity(argc, 1);
 
   const uint8_t *str = janet_getstring(argv, 0);
@@ -13,7 +13,7 @@ static Janet decode(int32_t argc, const Janet *argv) {
   return janet_stringv((const uint8_t *)out, out_len);
 }
 
-static Janet encode(int32_t argc, const Janet *argv) {
+static Janet encode(int32_t argc, Janet *argv) {
   janet_fixarity(argc, 1);
 
   const uint8_t *str = janet_getstring(argv, 0);
