@@ -10,4 +10,4 @@
 
 (declare-native
   :name "codec"
-  :source @["codec.c" "base64.c"])
+  :source @["sha1.c" "hmac_sha1.c" "codec.c" "base64.c"])

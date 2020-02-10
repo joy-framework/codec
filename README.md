@@ -1,13 +1,13 @@
 # codec
 
-base64 encode/decode library for janet
+encode/decode library for janet
 
 ## Install
 
 Add to your `project.janet` file
 
 ```clojure
-{:dependencies [{:repo "https://github.com/joy-framework/codec" :tag "b02ad8c07885cfe0e83ec04d249570831cf3e070"}]}
+{:dependencies ["https://github.com/joy-framework/codec"]}
 ```
 
 ## Use
@@ -18,4 +18,18 @@ Add to your `project.janet` file
 (= "hello there!" (codec/decode (codec/encode "hello there!")))
 ```
 
-And that's all folks
+## HMAC Hex Digests
+
+Codec can also perform sha1 hmac digests on strings
+
+```clojure
+(import codec)
+
+(codec/hmac-sha1 "secret token" "hello world")
+```
+
+This should be equivalent to the following ruby code:
+
+```ruby
+OpenSSL::HMAC.hexdigest(OpenSSL::Digest.new('sha1'), 'secret token', 'hello world')
+```
